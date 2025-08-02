@@ -1,0 +1,9 @@
+Technology,Development_Time_Weeks,Maintenance_Effort,Scalability_Score,Cost_Per_Month_USD,Best_For
+Next.js + Tailwind CSS,8,Medium,9,50,Custom newsletter websites with high performance
+WordPress + Elementor,4,Low,6,30,Quick deployment with visual editing
+React + Node.js,10,High,10,80,Full-stack custom solutions
+Vue.js + Nuxt.js,9,Medium,8,60,Modern SPA with SSR capabilities
+Webflow + Zapier,3,Low,5,40,No-code solution with automation
+Ghost CMS,2,Low,7,20,Publishing-focused platforms
+Strapi + Gatsby,7,Medium,8,70,Headless CMS with static generation
+Django + PostgreSQL,12,High,10,100,Enterprise-level applications

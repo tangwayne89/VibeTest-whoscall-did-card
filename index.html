@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>InsightHub - 智慧資訊電子報平台</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="nav-brand">
+                    <h2>InsightHub</h2>
+                </div>
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active">首頁</a>
+                    <a href="#articles" class="nav-link">文章</a>
+                    <a href="#subscribe" class="nav-link">訂閱</a>
+                    <a href="#dashboard" class="nav-link">管理</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">獲取有意義的資訊洞察</h1>
+                <p class="hero-subtitle">訂閱您感興趣的議題，定期接收客製化的 Newsletter，持續吸收 AI、區塊鏈、ESG 等領域的重要資訊</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">47,400+</div>
+                        <div class="stat-label">訂閱用戶</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1,200+</div>
+                        <div class="stat-label">精選文章</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">熱門議題</div>
+                    </div>
+                </div>
+                <button class="btn btn--primary btn--lg hero-cta" onclick="scrollToSection('subscribe')">
+                    立即訂閱
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section id="articles" class="articles-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>精選文章</h2>
+                <p>探索各個領域的深度洞察與趋势分析</p>
+            </div>
+            
+            <!-- Topic Filter -->
+            <div class="topic-filter">
+                <button class="filter-btn active" data-filter="all">全部</button>
+                <button class="filter-btn" data-filter="AI">人工智慧</button>
+                <button class="filter-btn" data-filter="Blockchain">區塊鏈</button>
+                <button class="filter-btn" data-filter="ESG">永續發展</button>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="articles-grid" id="articles-grid">
+                <!-- Articles will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Subscription Section -->
+    <section id="subscribe" class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-content">
+                <div class="subscribe-info">
+                    <h2>訂閱客製化電子報</h2>
+                    <p>選擇您感興趣的議題，我們將定期為您提供精選的深度文章和趨勢分析</p>
+                    
+                    <div class="topics-preview">
+                        <h3>可訂閱議題</h3>
+                        <div class="topics-list" id="topics-list">
+                            <!-- Topics will be populated by JavaScript -->
+                        </div>
+                    </div>
+                </div>
+
+                <div class="subscribe-form-container">
+                    <form class="subscribe-form" id="subscribe-form">
+                        <div class="form-group">
+                            <label class="form-label" for="email">電子郵件地址</label>
+                            <input type="email" class="form-control" id="email" name="email" required placeholder="your@email.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">感興趣的議題</label>
+                            <div class="checkbox-group" id="topic-checkboxes">
+                                <!-- Checkboxes will be populated by JavaScript -->
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="frequency">接收頻率</label>
+                            <select class="form-control" id="frequency" name="frequency">
+                                <option value="weekly">每週</option>
+                                <option value="daily">每日</option>
+                                <option value="monthly">每月</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="btn btn--primary btn--full-width">
+                            立即訂閱
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard" class="dashboard-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>訂閱管理</h2>
+                <p>管理您的訂閱偏好和查看歷史記錄</p>
+            </div>
+
+            <div class="dashboard-content" id="dashboard-content">
+                <div class="dashboard-placeholder">
+                    <p>請先完成訂閱以查看管理面板</p>
+                    <button class="btn btn--outline" onclick="scrollToSection('subscribe')">
+                        前往訂閱
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Preview Modal -->
+    <div class="modal-overlay" id="newsletter-modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>電子報預覽</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="newsletter-preview" id="newsletter-preview">
+                    <!-- Newsletter preview will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Toast -->
+    <div class="toast success-toast" id="success-toast">
+        <div class="toast-content">
+            <span class="toast-icon">✓</span>
+            <span class="toast-message">訂閱成功！歡迎加入 InsightHub</span>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
