@@ -1,9 +1,0 @@
-Phase,Duration_Weeks,Key_Deliverables,Team_Required
-1. Planning & Strategy,2,"Requirements document, sitemap, user personas","Project Manager, UX Designer"
-2. Design & UX,3,"Wireframes, mockups, style guide","UI/UX Designer, Frontend Developer"
-3. Frontend Development,4,"Responsive website, user interface","Frontend Developer, Designer"
-4. Backend & CMS,4,"Content management system, database","Backend Developer, DevOps"
-5. Email Integration,2,"Email automation, subscription management","Backend Developer, Email Specialist"
-6. Testing & QA,2,"Cross-browser testing, performance optimization","QA Engineer, Frontend Developer"
-7. Content Creation,3,"Initial articles, newsletter templates","Content Writer, Editor"
-8. Launch & Marketing,2,"SEO optimization, social media setup","Marketing Specialist, Developer"
